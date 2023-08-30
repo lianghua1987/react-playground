@@ -25,10 +25,14 @@
 }
 
 .App-nav {
-    width: 80%;
+    width: 90%;
     display: flex;
     margin: 1rem auto;
     justify-content: space-around;
+}
+
+.App-nav a {
+    font-size: 18px;
 }
 
 .App-nav a.active {

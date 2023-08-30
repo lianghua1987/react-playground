@@ -1,5 +1,5 @@
 import React from 'react';
-import {NavLink, Route, Routes} from 'react-router-dom';
+import {Navigate, NavLink, Route, Routes} from 'react-router-dom';
 import './App.css';
 import Hua from "./random/Hua";
 import State from "./State";
@@ -10,9 +10,14 @@ import Food from "./random/Food";
 import Clock from "./lifecycle-methods/Clock";
 import ZenQuote from "./lifecycle-methods/ZenQuote";
 import GithubUsers from "./lifecycle-methods/GithubUsers";
+import {render} from "@testing-library/react";
+import NotFound from "./not-found";
+import Counter from "./hooks/Counter";
+import Hooks from "./hooks/Hooks";
 
 function App() {
 
+  // @ts-ignore
   return (
     <div className="App">
       <header className="App-header">
@@ -26,10 +31,12 @@ function App() {
           <NavLink to="/state">State</NavLink>
           <NavLink to="/number-list">Number List</NavLink>
           <NavLink to="/github-user">Github</NavLink>
+          <NavLink to="/hooks">Hooks</NavLink>
         </nav>
         <Routes>
           <Route path="/" element={<Hua name="Hua" mood="OBLIVIOUS"/>}/>
           <Route path="/food" element={<Food/>}/>
+          <Route path="/food/:name" element={<Food/>}/>
           <Route path="/clock" element={<Clock/>}/>
           <Route path="/zen-quote" element={<ZenQuote/>}/>
           <Route path="/roll-dice" element={<RollDice/>}/>
@@ -37,6 +44,9 @@ function App() {
           <Route path="/state" element={<State/>}/>
           <Route path="/number-list" element={<NumberList/>}/>
           <Route path="/github-user" element={<GithubUsers/>}/>
+          <Route path="/hooks" element={<Navigate to="/hooks/counter" replace/>}/>
+          <Route path="/hooks/:id" element={<Hooks/>}/>
+          <Route path="*" element={<NotFound/>}/>
         </Routes>
       </header>
     </div>
