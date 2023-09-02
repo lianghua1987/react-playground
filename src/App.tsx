@@ -16,6 +16,7 @@ import Navbar from "./context/Navbar";
 import ThemeProvider2 from "./context/ThemeContext2";
 import Context from "./context/Context";
 import PokeGame from "./pokemon/PokeGame";
+import BoxList from "./box/BoxList";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <nav className="App-nav">
           <NavLink to="/">Home</NavLink>
           <NavLink to="/pokegame">Pokemon</NavLink>
+          <NavLink to="/box-list">Boxes</NavLink>
           <NavLink to="/context">Context</NavLink>
           <NavLink to="/food">Food</NavLink>
           <NavLink to="/clock">Clock</NavLink>
@@ -41,6 +43,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Hua name="Hua" mood="OBLIVIOUS"/>}/>
           <Route path="/pokegame" element={<PokeGame/>}/>
+          <Route path="/box-list" element={<BoxList/>}/>
           <Route path="/context" element={<Context/>}/>
           <Route path="/food" element={<Food/>}/>
           <Route path="/food/:name" element={<Food/>}/>
