@@ -1,21 +1,19 @@
 .App {
     text-align: center;
     width: 100%;
+    background-color: red!important;
 }
 
 .App-header {
-    background-color: #263238;
 }
 
 .App-body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #282c34 !important;
     color: white;
     width: 100% !important;
     font-size: 30px;
-    height: 100vh;
 }
 
 .App-nav {

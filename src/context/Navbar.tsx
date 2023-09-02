@@ -4,15 +4,15 @@ import ToolBar from '@mui/material/Toolbar';
 import Switch from '@mui/material/Switch';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import { styled, createTheme, ThemeProvider } from '@mui/system';
-import {ThemeContext} from "./ThemeContext";
+import {styled} from '@mui/system';
+import {ThemeContext2} from "./ThemeContext2";
 import './Navbar.css';
 
 function Navbar(props: any) {
   const classes = props;
 
   // @ts-ignore
-  const {isDarkMode, toggleTheme} = useContext(ThemeContext);
+  const {isDarkMode, toggleTheme} = useContext(ThemeContext2);
   const [darkMode, setDarkMode] = useState(isDarkMode);
 
   const changeHandler = () => {
