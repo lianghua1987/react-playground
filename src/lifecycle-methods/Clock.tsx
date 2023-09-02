@@ -4,9 +4,10 @@ class Clock extends Component<any, any> {
   timerId: any;
 
   constructor(props: any) {
+    // console.log("In Constructor");
     super(props);
     this.state = {time: new Date()};
-    // console.log("In Constructor");
+
   }
 
   componentDidMount() {

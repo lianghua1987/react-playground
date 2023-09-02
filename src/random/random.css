@@ -14,3 +14,18 @@
     color: salmon;
     border-bottom: 1px solid white;
 }
+
+.Random div {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.ButtonList-button {
+    height: 2.5rem;
+    align-self: center;
+    width: 100%;
+}
