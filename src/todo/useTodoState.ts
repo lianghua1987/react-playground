@@ -1,15 +1,16 @@
 import {ITodo} from "./ITodo";
-import {useState} from "react";
+import useLocalStorageState from "./useLocalStorageState";
 
 export default (initialTodos: ITodo[]) => {
-  const [todos, setTodos] = useState<ITodo[]>(initialTodos);
+  const [todos, setTodos] = useLocalStorageState("todos", initialTodos);
+
   return {
     todos,
     handleCreate: (todo: ITodo) => {
       setTodos([...todos, todo]);
     },
     handleRemove: (id: string) => {
-      setTodos(todos.filter(t => t.id !== id));
+      setTodos(todos.filter((t: ITodo) => t.id !== id));
     },
     editHandler: (todo: ITodo) => {
       const todosCopy = [...todos];
