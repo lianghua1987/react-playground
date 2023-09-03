@@ -23,7 +23,7 @@ function App() {
           <NavLink to="/">Home</NavLink>
           <NavLink to="/pokegame">Pokemon</NavLink>
           <NavLink to="/box-list">Boxes</NavLink>
-          <NavLink to="/todo">Todo</NavLink>
+          <NavLink to="/todo">Todos</NavLink>
           <NavLink to="/random">Random</NavLink>
           <NavLink to="/context">Context</NavLink>
           <NavLink to="/food">Food</NavLink>
