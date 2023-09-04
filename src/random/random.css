@@ -29,3 +29,33 @@
     align-self: center;
     width: 100%;
 }
+
+
+
+.Random {
+    width: 80%;
+}
+
+.Random-nav {
+    display: flex;
+    padding-right: 20px;
+    justify-content: stretch;
+    align-content: stretch;
+}
+.Random-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Random-nav a {
+    width: 100%;
+    font-size: 16px;
+    margin-top: 0;
+    flex-grow: 1;
+}
+
+.Random-nav a.active {
+    color: salmon;
+    border-bottom: 1px solid white;
+}

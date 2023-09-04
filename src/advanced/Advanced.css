@@ -1,22 +1,27 @@
-.Hooks {
+.Advanced {
     width: 80%;
 }
 
-.Hooks-nav {
+.Advanced-nav {
     display: flex;
     padding-right: 20px;
     justify-content: stretch;
     align-content: stretch;
 }
+.Advanced-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-.Hooks-nav a {
+.Advanced-nav a {
     width: 100%;
     font-size: 16px;
     margin-top: 0;
     flex-grow: 1;
 }
 
-.Hooks-nav a.active {
+.Advanced-nav a.active {
     color: salmon;
     border-bottom: 1px solid white;
 }

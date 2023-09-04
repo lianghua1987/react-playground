@@ -1,15 +1,8 @@
-import {ITodo} from "./ITodo";
-import Todo from "./Todo";
 import './Todos.css';
 import TodoForm from "./TodoForm";
-import {useContext} from "react";
-import {TodosContext} from "./context/todos.context";
+import TodoList from "./TodoList";
 
 export default function Todos() {
-
-  // @ts-ignore
-  const {todos} = useContext(TodosContext);
-
   return (
     <div className="Todo">
       <div className="Todos-container">
@@ -17,11 +10,7 @@ export default function Todos() {
           Hua's Todo List <span>A simple react app</span>
         </h1>
         <TodoForm/>
-        <ul>
-          {
-            todos.map((t: ITodo) => <Todo todo={t} key={t.id}/>)
-          }
-        </ul>
+        <TodoList/>
       </div>
     </div>
   );

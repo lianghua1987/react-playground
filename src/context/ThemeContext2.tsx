@@ -1,5 +1,5 @@
 import React, {createContext} from "react";
-import {useToggle} from "../hooks/useToggle";
+import {useToggle} from "../advanced/useToggle";
 
 // @ts-ignore
 export const ThemeContext2 = createContext();

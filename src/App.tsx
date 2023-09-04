@@ -3,9 +3,7 @@ import {Navigate, NavLink, Route, Routes} from 'react-router-dom';
 import './App.css';
 import Hua from "./random/Hua";
 import RollDice from "./roll-dice/RollDice";
-import Food from "./random/Food";
 import NotFound from "./not-found";
-import Hooks from "./advanced/Hooks";
 import Navbar from "./context/Navbar";
 import ThemeProvider2 from "./context/ThemeContext2";
 import Context from "./context/Context";
@@ -14,6 +12,7 @@ import BoxList from "./box/BoxList";
 import {Random} from "./random/Random";
 import Todos from "./todo/Todos";
 import TodosProvider from "./todo/context/todos.context";
+import Advanced from "./advanced/Advanced";
 
 function App() {
   return (
@@ -27,7 +26,6 @@ function App() {
           <NavLink to="/todo">Todos</NavLink>
           <NavLink to="/random">Random</NavLink>
           <NavLink to="/context">Context</NavLink>
-          <NavLink to="/food">Food</NavLink>
           <NavLink to="/roll-dice">Roll Dice</NavLink>
           <NavLink to="/advanced">Advanced</NavLink>
         </nav>
@@ -38,13 +36,12 @@ function App() {
           <Route path="/pokegame" element={<PokeGame/>}/>
           <Route path="/box-list" element={<BoxList/>}/>
           <Route path="/todo" element={<TodosProvider><Todos/></TodosProvider>}/>
-          <Route path="/random" element={<Random/>}/>
+          <Route path="/random"  element={<Navigate to="/random/clock" replace/>}/>
+          <Route path="/random/:id" element={<Random/>}/>
           <Route path="/context" element={<Context/>}/>
-          <Route path="/food" element={<Food/>}/>
-          <Route path="/food/:name" element={<Food/>}/>
           <Route path="/roll-dice" element={<RollDice/>}/>
           <Route path="/advanced" element={<Navigate to="/advanced/counter" replace/>}/>
-          <Route path="/advanced/:id" element={<Hooks/>}/>
+          <Route path="/advanced/:id" element={<Advanced/>}/>
           <Route path="*" element={<NotFound/>}/>
         </Routes>
       </div>
