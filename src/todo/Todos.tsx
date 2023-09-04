@@ -1,19 +1,15 @@
-import {useEffect, useState} from "react";
 import {ITodo} from "./ITodo";
-import TodoForm from "./TodoForm";
 import Todo from "./Todo";
 import './Todos.css';
-import useTodoState from "./useTodoState";
-import useLocalStorageState from "./useLocalStorageState";
+import useTodoState from "./hooks/useTodoState";
+import TodoForm from "./TodoForm";
+import {useContext} from "react";
+import {TodosContext} from "./context/todos.context";
 
 export default function Todos() {
 
-  const initialTodos = JSON.parse(window.localStorage.getItem("todos") || "[]");
-  const {todos, handleCreate, handleRemove, editHandler, completeHandler} = useTodoState(initialTodos);
-
-  useEffect(() => {
-    window.localStorage.setItem("todos", JSON.stringify(todos));
-  }, [todos]);
+  // @ts-ignore
+  const {todos} = useContext(TodosContext);
 
   return (
     <div className="Todo">
@@ -21,11 +17,10 @@ export default function Todos() {
         <h1>
           Hua's Todo List <span>A simple react app</span>
         </h1>
-        <TodoForm create={handleCreate}/>
+        <TodoForm/>
         <ul>
           {
-            todos.map((t: ITodo) => <Todo todo={t} key={t.id} onRemove={handleRemove} onEdit={editHandler}
-                                          onComplete={completeHandler}/>)
+            todos.map((t: ITodo) => <Todo todo={t} key={t.id}/>)
           }
         </ul>
       </div>

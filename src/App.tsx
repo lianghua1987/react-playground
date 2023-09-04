@@ -13,6 +13,7 @@ import PokeGame from "./pokemon/PokeGame";
 import BoxList from "./box/BoxList";
 import {Random} from "./random/Random";
 import Todos from "./todo/Todos";
+import TodosProvider from "./todo/context/todos.context";
 
 function App() {
   return (
@@ -36,7 +37,7 @@ function App() {
           <Route path="/" element={<Hua name="Hua" mood="OBLIVIOUS"/>}/>
           <Route path="/pokegame" element={<PokeGame/>}/>
           <Route path="/box-list" element={<BoxList/>}/>
-          <Route path="/todo" element={<Todos/>}/>
+          <Route path="/todo" element={<TodosProvider><Todos/></TodosProvider>}/>
           <Route path="/random" element={<Random/>}/>
           <Route path="/context" element={<Context/>}/>
           <Route path="/food" element={<Food/>}/>

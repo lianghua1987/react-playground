@@ -1,4 +1,4 @@
-import {ITodo} from "./ITodo";
+import {ITodo} from "../ITodo";
 import useLocalStorageState from "./useLocalStorageState";
 
 export default (initialTodos: ITodo[]) => {

@@ -1,9 +1,13 @@
-import {useState} from "react";
+import {useContext, useState} from "react";
 import {v4 as uuidv4} from 'uuid';
+import {TodosContext} from "./context/todos.context";
+import useTodoState from "./hooks/useTodoState";
 
 
 export default function TodoForm(props: any) {
   const [task, setTask] = useState('');
+  // @ts-ignore
+  const {handleCreate} = useContext(TodosContext);
 
   const handleChange = (e: any) => {
     setTask(e.target.value);
@@ -12,7 +16,7 @@ export default function TodoForm(props: any) {
   const handleSubmit = (e: any) => {
     e.preventDefault();
     const todo = {task, id: uuidv4(), isCompleted: false};
-    props.create(todo);
+    handleCreate(todo);
     setTask("");
   };
 
