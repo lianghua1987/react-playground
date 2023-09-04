@@ -1,7 +1,6 @@
 import {ITodo} from "./ITodo";
 import Todo from "./Todo";
 import './Todos.css';
-import useTodoState from "./hooks/useTodoState";
 import TodoForm from "./TodoForm";
 import {useContext} from "react";
 import {TodosContext} from "./context/todos.context";

@@ -5,7 +5,7 @@ import Hua from "./random/Hua";
 import RollDice from "./roll-dice/RollDice";
 import Food from "./random/Food";
 import NotFound from "./not-found";
-import Hooks from "./hooks/Hooks";
+import Hooks from "./advanced/Hooks";
 import Navbar from "./context/Navbar";
 import ThemeProvider2 from "./context/ThemeContext2";
 import Context from "./context/Context";
@@ -29,7 +29,7 @@ function App() {
           <NavLink to="/context">Context</NavLink>
           <NavLink to="/food">Food</NavLink>
           <NavLink to="/roll-dice">Roll Dice</NavLink>
-          <NavLink to="/hooks">Hooks</NavLink>
+          <NavLink to="/advanced">Advanced</NavLink>
         </nav>
       </header>
       <div className="App-body">
@@ -43,8 +43,8 @@ function App() {
           <Route path="/food" element={<Food/>}/>
           <Route path="/food/:name" element={<Food/>}/>
           <Route path="/roll-dice" element={<RollDice/>}/>
-          <Route path="/hooks" element={<Navigate to="/hooks/counter" replace/>}/>
-          <Route path="/hooks/:id" element={<Hooks/>}/>
+          <Route path="/advanced" element={<Navigate to="/advanced/counter" replace/>}/>
+          <Route path="/advanced/:id" element={<Hooks/>}/>
           <Route path="*" element={<NotFound/>}/>
         </Routes>
       </div>

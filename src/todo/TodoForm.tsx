@@ -1,8 +1,6 @@
 import {useContext, useState} from "react";
 import {v4 as uuidv4} from 'uuid';
 import {TodosContext} from "./context/todos.context";
-import useTodoState from "./hooks/useTodoState";
-
 
 export default function TodoForm(props: any) {
   const [task, setTask] = useState('');
