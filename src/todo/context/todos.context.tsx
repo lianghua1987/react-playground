@@ -1,6 +1,8 @@
 import {createContext, useReducer} from "react";
 import {ITodo} from "../ITodo";
 import useTodoState from "../hooks/useTodoState";
+import useLocalStorageState from "../hooks/useLocalStorageState";
+
 const defaultTodos: ITodo[] = [
   {id: "1", task: "Run 5k in the afternoon", isCompleted: false},
   {id: "2", task: "Go to grocery store and get a fried chicken sandwich", isCompleted: false}
@@ -14,20 +16,29 @@ export const DispatchContext = createContext();
 export default function TodosProvider(props: any) {
   // const {todos, ...dispatch} = useTodoState(defaultTodos);
 
+  const [todoList, setTodoList] = useLocalStorageState("todos", defaultTodos);
+
   const [todos, dispatch] = useReducer((state: any, action: any) => {
+    let updated;
     switch (action.type) {
       case "CREATE":
-        return [...state, action.todo];
+        updated = [...state, action.todo];
+        break;
       case "REMOVE":
-        return state.filter((t: ITodo) => t.id !== action.id);
+        updated = state.filter((t: ITodo) => t.id !== action.id);
+        break;
       case "TOGGLE":
-        return state.map((t: ITodo) => t.id == action.id ? {...t, isCompleted: !t.isCompleted} : t);
+        updated = state.map((t: ITodo) => t.id == action.id ? {...t, isCompleted: !t.isCompleted} : t);
+        break;
       case "EDIT":
-        return state.map((t: ITodo) => t.id == action.id ? {...t, task: action.task} : t);
+        updated = state.map((t: ITodo) => t.id == action.id ? {...t, task: action.task} : t);
+        break;
       default:
         return state;
     }
-  }, defaultTodos);
+    setTodoList(updated);
+    return updated;
+  }, todoList);
 
   return (
     <TodosContext.Provider value={todos}>

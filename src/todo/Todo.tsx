@@ -37,7 +37,7 @@ function Todo(props: any) {
           <i className="fas fa-pen"/>
         </button>
         {/*<button onClick={() => handleRemove(props.todo.id)}>*/}
-        <button onClick={() => dispatch({type: "REMOVE", id: props.todo.id})(props.todo.id)}>
+        <button onClick={() => dispatch({type: "REMOVE", id: props.todo.id})}>
           <i className="fas fa-trash"/>
         </button>
       </div>
