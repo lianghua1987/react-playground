@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css?family=Rubik");
+
+.Jokes {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    height: 100vh;
+    width: 100%;
+    padding-top: 2rem;
+    flex-direction: column;
+    font-family: "Rubik", sans-serif;
+    color: #78909c;
+    background: linear-gradient(
+            135deg,
+            rgba(179, 229, 252, 1) 0%,
+            rgba(179, 229, 252, 1) 50%,
+            rgba(240, 98, 146, 1) 50%,
+            rgba(240, 98, 146, 1) 100%
+    );
+}
+
+.Jokes-container {
+    display: flex;
+    width: 80%;
+    height: 80%;
+}
+
+.Jokes-sidebar {
+    background: #9575cd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    width: 30%;
+    text-align: center;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1),
+    inset 0 0 25px #7e57c2;
+    z-index: 2;
+}
+
+.Jokes-title {
+    font-size: 4rem;
+    margin: 2em;
+    letter-spacing: 0.6rem;
+    color: white;
+    font-weight: 300;
+}
+
+.Jokes-title span {
+    font-weight: 700;
+    letter-spacing: 0;
+}
+
+.Jokes-sidebar img {
+    width: 50%;
+    border-radius: 50%;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1);
+}
+
+.Jokes-content {
+    height: 90%;
+    background: white;
+    align-self: center;
+    overflow: scroll;
+    width: 70%;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1);
+}
