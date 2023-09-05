@@ -13,6 +13,7 @@ import {Random} from "./random/Random";
 import Todos from "./todo/Todos";
 import TodosProvider from "./todo/context/todos.context";
 import Advanced from "./advanced/Advanced";
+import Hangman from "./hangman/Hangman";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <nav className="App-nav">
           <NavLink to="/">Home</NavLink>
           <NavLink to="/pokegame">Pokemon</NavLink>
+          <NavLink to="/hangman">Hangman</NavLink>
           <NavLink to="/box-list">Boxes</NavLink>
           <NavLink to="/todo">Todos</NavLink>
           <NavLink to="/random">Random</NavLink>
@@ -34,6 +36,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Hua name="Hua" mood="OBLIVIOUS"/>}/>
           <Route path="/pokegame" element={<PokeGame/>}/>
+          <Route path="/hangman" element={<Hangman/>}/>
           <Route path="/box-list" element={<BoxList/>}/>
           <Route path="/todo" element={<TodosProvider><Todos/></TodosProvider>}/>
           <Route path="/random"  element={<Navigate to="/random/clock" replace/>}/>

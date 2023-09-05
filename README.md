@@ -7,3 +7,5 @@ Form submission, parent/children communication
 ![color-box.png](public%2Fpreviews%2Fcolor-box.png)
 ## Todo List (Fontawesome)
 ![todo-list.png](public%2Fpreviews%2Ftodo-list.png)
+## Hangman
+![hangman.png](public%2Fpreviews%2Fhangman.png)
