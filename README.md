@@ -9,3 +9,6 @@ Form submission, parent/children communication
 ![todo-list.png](public%2Fpreviews%2Ftodo-list.png)
 ## Hangman
 ![hangman.png](public%2Fpreviews%2Fhangman.png)
+## Card API
+[Deck of Cards API](https://www.deckofcardsapi.com/)
+![card-dealer.png](public%2Fpreviews%2Fcard-dealer.png)

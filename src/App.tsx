@@ -14,6 +14,7 @@ import Todos from "./todo/Todos";
 import TodosProvider from "./todo/context/todos.context";
 import Advanced from "./advanced/Advanced";
 import Hangman from "./hangman/Hangman";
+import Deck from "./card-api/Deck";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <NavLink to="/">Home</NavLink>
           <NavLink to="/pokegame">Pokemon</NavLink>
           <NavLink to="/hangman">Hangman</NavLink>
+          <NavLink to="/deck">Deck</NavLink>
           <NavLink to="/box-list">Boxes</NavLink>
           <NavLink to="/todo">Todos</NavLink>
           <NavLink to="/random">Random</NavLink>
@@ -37,6 +39,7 @@ function App() {
           <Route path="/" element={<Hua name="Hua" mood="OBLIVIOUS"/>}/>
           <Route path="/pokegame" element={<PokeGame/>}/>
           <Route path="/hangman" element={<Hangman/>}/>
+          <Route path="/deck" element={<Deck/>}/>
           <Route path="/box-list" element={<BoxList/>}/>
           <Route path="/todo" element={<TodosProvider><Todos/></TodosProvider>}/>
           <Route path="/random"  element={<Navigate to="/random/clock" replace/>}/>

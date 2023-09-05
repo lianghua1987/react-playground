@@ -1,0 +1,26 @@
+.Deck {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+.Deck button {
+    background: none;
+    outline: none;
+    color: #009688;
+    margin: 0.5rem;
+    padding: 1em 2em;
+    border: 2px solid;
+}
+
+.Deck button:hover {
+    border-color: #4caf50;
+    color: white;
+    box-shadow: inset 0 0 0 2em #4caf50;
+    cursor: pointer;
+}
+
+.Deck-cardarea {
+    margin-top: 80px;
+}
