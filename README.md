@@ -12,3 +12,6 @@ Form submission, parent/children communication
 ## Card API
 [Deck of Cards API](https://www.deckofcardsapi.com/)
 ![card-dealer.png](public%2Fpreviews%2Fcard-dealer.png)
+## Dad Jokes
+[Emoji Css](https://emoji-css.afeld.me/)
+![dad-jokes.png](public%2Fpreviews%2Fdad-jokes.png)
